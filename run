@@ -1,0 +1,10 @@
+require_relative 'lib/config/enviroment.rb' 
+
+article = Article.new
+author = Author.new 
+magazine = Magazine.new
+
+article.testOne
+author.testOne
+magazine.testOne
+
