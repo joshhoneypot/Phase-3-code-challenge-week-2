@@ -22,3 +22,7 @@ puts Magazine.all.inspect
 # article initialization test
 puts article_1.title
 puts Article.all.inspect
+
+# Object Relationship Methods
+puts article_1.author.name
+puts article_1.magazine.name
