@@ -1,5 +1,22 @@
 class Magazine
-    def testOne
-        puts "magazine path working"
+    attr_accessor :name, :category
+    @@all = []
+
+    def initialize(name,category)
+        @name=name
+        @category=category
+        @@all << self
+    end
+
+    def name
+        puts @name
+    end
+
+    def category
+        puts @category
+    end
+
+    def self.all
+        @@all
     end
 end

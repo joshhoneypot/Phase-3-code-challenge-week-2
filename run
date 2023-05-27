@@ -1,10 +1,8 @@
 require_relative 'lib/config/enviroment.rb' 
 
-article = Article.new
-author = Author.new 
-magazine = Magazine.new
+article_1 = Article.new
+author_1 = Author.new("R.L Stine")
+magazine_1 = Magazine.new
 
-article.testOne
-author.testOne
-magazine.testOne
 
+puts author_1.name

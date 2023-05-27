@@ -1,5 +1,5 @@
 class Article
-    def testOne
-        puts "article path working"
+    def initialize
+        
     end
 end
