@@ -8,6 +8,7 @@ magazine_2 = Magazine.new("Big A", "Fitness")
 article_1 = Article.new(author_1, magazine_1, "Programming")
 
 author_1.write_article(magazine_1, "Programming")
+author_1.write_article(magazine_2, "Fitness")
 
 # # author initialization test
 # puts author_1.name
@@ -30,5 +31,6 @@ author_1.write_article(magazine_1, "Programming")
 # puts article_1.author.name
 # puts article_1.magazine.name
 
-# Author returns
-puts author_1.articles.inspect
+# # Author returns
+# puts author_1.articles.inspect
+puts author_1.magazines.inspect

@@ -12,12 +12,14 @@ class Author
     end
 
     def magazines
-        @magazines.uniq
+        @magazines
     end
 
     def write_article(magazine, title)
         article=Article.new(self, magazine, title)
         @articles << article
+        magazine.contributors << self
+        @magazines << magazine
     end
 
     def name

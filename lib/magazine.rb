@@ -1,5 +1,5 @@
 class Magazine
-    attr_accessor :name, :category
+    attr_accessor :name, :category, :contributors
 
     @@all = []
 
@@ -7,6 +7,7 @@ class Magazine
         @name=name
         @category=category
         @@all << self
+        @contributors=[]
     end
 
     def name
