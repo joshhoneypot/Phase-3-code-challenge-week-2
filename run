@@ -1,15 +1,16 @@
 require_relative 'lib/config/enviroment.rb' 
 
-article_1 = Article.new
-author_1 = Author.new("R.L Stine")
+author_1 = Author.new("Programmer Ben")
 
 magazine_1 = Magazine.new("Big O", "coding")
 magazine_2 = Magazine.new("Big A", "Fitness")
 
-#author initialization test
+article_1 = Article.new(author_1, magazine_1, "Programming")
+
+# author initialization test
 puts author_1.name
 
-#magazine initialization test
+# magazine initialization test
 puts magazine_1.name
 puts magazine_1.category
 
@@ -17,3 +18,6 @@ puts magazine_2.name
 puts magazine_2.category
 
 puts Magazine.all.inspect
+
+# article initialization test
+puts Article.all.inspect
