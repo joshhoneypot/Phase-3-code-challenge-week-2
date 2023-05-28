@@ -67,4 +67,4 @@ author_1.add_article(magazine_5, "Programming efficiency")
 # puts Magazine.find_by_name("Big Essentials").inspect
 
 # Magazine#article_titles
-puts magazine_3.article_titles
+puts magazine_2.article_titles
