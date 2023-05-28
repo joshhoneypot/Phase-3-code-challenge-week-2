@@ -30,4 +30,7 @@ class Author
         write_article(magazine, title)
     end
 
+    def topic_areas
+        @magazines.map(&:category).uniq
+    end
 end

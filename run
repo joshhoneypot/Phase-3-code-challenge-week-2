@@ -3,46 +3,53 @@ require_relative 'lib/config/enviroment.rb'
 author_1 = Author.new("Programmer Ben")
 author_2 = Author.new("Fit Patrick")
 
-magazine_1 = Magazine.new("Big O", "coding")
+magazine_1 = Magazine.new("Big O", "Coding")
 magazine_2 = Magazine.new("Big A", "Fitness")
+magazine_3 = Magazine.new("Big F", "Cooking")
+magazine_4 = Magazine.new("Big R", "Coding")
 
-article_1 = Article.new(author_1, magazine_1, "Programming")
-article_2 = Article.new(author_2, magazine_2, "Fitness")
+article_1 = Article.new(author_1, magazine_1, "Programming efficiency")
+article_2 = Article.new(author_2, magazine_2, "Fit body rules")
+article_3 = Article.new(author_2, magazine_3, "Food for thought")
+article_4 = Article.new(author_1, magazine_4, "Coding with Ruby")
 
-author_1.write_article(magazine_1, "Programming")
-author_2.write_article(magazine_2, "Fitness")
+author_1.write_article(magazine_1, "Programming efficiency")
+author_2.write_article(magazine_2, "Fit body rules")
 
-author_1.add_article(magazine_1, "Programming")
-author_2.add_article(magazine_2, "Fitness")
+author_1.add_article(magazine_1, "Programming efficiency")
+author_2.add_article(magazine_2, "Fit body rules")
 
-# author initialization test
-puts author_1.name
+# # author initialization test
+# puts author_1.name
 
-# magazine initialization test
-puts magazine_1.name
-puts magazine_1.category
+# # magazine initialization test
+# puts magazine_1.name
+# puts magazine_1.category
 
-puts magazine_2.name
-puts magazine_2.category
+# puts magazine_2.name
+# puts magazine_2.category
 
-puts Magazine.all.inspect
+# puts Magazine.all.inspect
 
-# article initialization test
-puts article_1.title
-puts Article.all.inspect
+# # article initialization test
+# puts article_1.title
+# puts Article.all.inspect
 
-# Object Relationship Methods
-# Article returns
-puts article_1.author.name
-puts article_1.magazine.name
+# # Object Relationship Methods
+# # Article returns
+# puts article_1.author.name
+# puts article_1.magazine.name
 
-# Author returns
+# # Author returns
+# puts author_1.articles.inspect
+
+# # Magazine returns
+# puts author_1.magazines.inspect
+
+# # Associations and Aggregate Methods
+# # Author#add_article
 puts author_1.articles.inspect
+puts author_2.articles.inspect
 
-# Magazine returns
 puts author_1.magazines.inspect
-
-# Associations and Aggregate Methods
-# Author#add_article
-puts author_1.articles.inspect
 puts author_2.magazines.inspect
