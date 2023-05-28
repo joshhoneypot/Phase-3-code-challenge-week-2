@@ -29,5 +29,15 @@ class Magazine
     def article_titles
         Article.all.select { |article| article.magazine == self }.map(&:title)
     end
+
+    def contributing_authors
+        author_counts = Hash.new(0)
+        Article.all.each do |article|
+            author_counts[article.author] += 1
+        end
+
+        author_counts.select { |author, count| count > 2 }.keys
+    end
+        
   end
   
