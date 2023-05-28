@@ -1,36 +1,48 @@
 require_relative 'lib/config/enviroment.rb' 
 
 author_1 = Author.new("Programmer Ben")
+author_2 = Author.new("Fit Patrick")
 
 magazine_1 = Magazine.new("Big O", "coding")
 magazine_2 = Magazine.new("Big A", "Fitness")
 
 article_1 = Article.new(author_1, magazine_1, "Programming")
+article_2 = Article.new(author_2, magazine_2, "Fitness")
 
 author_1.write_article(magazine_1, "Programming")
-author_1.write_article(magazine_2, "Fitness")
+author_2.write_article(magazine_2, "Fitness")
 
-# # author initialization test
-# puts author_1.name
+author_1.add_article(magazine_1, "Programming")
+author_2.add_article(magazine_2, "Fitness")
 
-# # magazine initialization test
-# puts magazine_1.name
-# puts magazine_1.category
+# author initialization test
+puts author_1.name
 
-# puts magazine_2.name
-# puts magazine_2.category
+# magazine initialization test
+puts magazine_1.name
+puts magazine_1.category
 
-# puts Magazine.all.inspect
+puts magazine_2.name
+puts magazine_2.category
 
-# # article initialization test
-# puts article_1.title
-# puts Article.all.inspect
+puts Magazine.all.inspect
 
-# # Object Relationship Methods
-# # Article returns
-# puts article_1.author.name
-# puts article_1.magazine.name
+# article initialization test
+puts article_1.title
+puts Article.all.inspect
 
-# # Author returns
-# puts author_1.articles.inspect
+# Object Relationship Methods
+# Article returns
+puts article_1.author.name
+puts article_1.magazine.name
+
+# Author returns
+puts author_1.articles.inspect
+
+# Magazine returns
 puts author_1.magazines.inspect
+
+# Associations and Aggregate Methods
+# Author#add_article
+puts author_1.articles.inspect
+puts author_2.magazines.inspect

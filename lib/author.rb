@@ -1,5 +1,5 @@
 class Author
-    attr_reader :name
+    attr_reader :name, :articles, :magazines
 
     def initialize (name)
         @name = name
@@ -25,4 +25,9 @@ class Author
     def name
         puts @name
     end
+
+    def add_article(magazine, title)
+        write_article(magazine, title)
+    end
+
 end
