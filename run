@@ -9,10 +9,10 @@ magazine_3 = Magazine.new("Big F", "Cooking")
 magazine_4 = Magazine.new("Big R", "Coding")
 magazine_5 = Magazine.new("Big Essentials", "Programming guide")
 
-article_1 = Article.new(author_1, magazine_1, "Programming efficiency")
+article_1 = Article.new(author_1, magazine_1, "Programming Essentials")
 article_2 = Article.new(author_2, magazine_2, "Fit body rules")
 article_3 = Article.new(author_2, magazine_3, "Food for thought")
-article_4 = Article.new(author_1, magazine_4, "Programming efficiency")
+article_4 = Article.new(author_1, magazine_4, "Programming Clad")
 article_5 = Article.new(author_1, magazine_5, "Programming efficiency")
 
 author_1.write_article(magazine_1, "Programming efficiency")
@@ -67,4 +67,4 @@ author_1.add_article(magazine_5, "Programming efficiency")
 # puts Magazine.find_by_name("Big Essentials").inspect
 
 # Magazine#article_titles
-puts magazine_2.article_titles
+puts magazine_1.article_titles
