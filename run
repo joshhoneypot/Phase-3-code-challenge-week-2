@@ -23,45 +23,48 @@ author_1.add_article(magazine_1, "Programming efficiency")
 author_2.add_article(magazine_2, "Fit body rules")
 author_1.add_article(magazine_5, "Programming efficiency")
 
-# author initialization test
-puts author_1.name
+# # author initialization test
+# puts author_1.name
 
-# magazine initialization test
-puts magazine_1.name
-puts magazine_1.category
+# # magazine initialization test
+# puts magazine_1.name
+# puts magazine_1.category
 
-puts magazine_2.name
-puts magazine_2.category
+# puts magazine_2.name
+# puts magazine_2.category
 
-puts Magazine.all.inspect
+# puts Magazine.all.inspect
 
-# article initialization test
-puts article_1.title
-puts Article.all.inspect
+# # article initialization test
+# puts article_1.title
+# puts Article.all.inspect
 
-# Object Relationship Methods
-# Article returns
-puts article_1.author.name
-puts article_1.magazine.name
+# # Object Relationship Methods
+# # Article returns
+# puts article_1.author.name
+# puts article_1.magazine.name
 
-# Author returns
-puts author_1.articles.inspect
+# # Author returns
+# puts author_1.articles.inspect
 
-# Magazine returns
-puts author_1.magazines.inspect
+# # Magazine returns
+# puts author_1.magazines.inspect
 
-# Associations and Aggregate Methods
-# Author#add_article returns
-puts author_1.articles.inspect
-puts author_2.articles.inspect
+# # Associations and Aggregate Methods
+# # Author#add_article returns
+# puts author_1.articles.inspect
+# puts author_2.articles.inspect
 
-puts author_1.magazines.inspect
-puts author_2.magazines.inspect
+# puts author_1.magazines.inspect
+# puts author_2.magazines.inspect
 
-# Author#topic_areas returns
-puts author_1.topic_areas.inspect
-puts author_2.topic_areas.inspect
+# # Author#topic_areas returns
+# puts author_1.topic_areas.inspect
+# puts author_2.topic_areas.inspect
 
-# Magazine.find_by_name returns
-puts Magazine.find_by_name("Big").inspect
-puts Magazine.find_by_name("Big Essentials").inspect
+# # Magazine.find_by_name returns
+# puts Magazine.find_by_name("Big").inspect
+# puts Magazine.find_by_name("Big Essentials").inspect
+
+# Magazine#article_titles
+puts magazine_3.article_titles
