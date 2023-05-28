@@ -7,17 +7,21 @@ magazine_1 = Magazine.new("Big O", "Coding")
 magazine_2 = Magazine.new("Big A", "Fitness")
 magazine_3 = Magazine.new("Big F", "Cooking")
 magazine_4 = Magazine.new("Big R", "Coding")
+magazine_5 = Magazine.new("Big Essentials", "Programming guide")
 
 article_1 = Article.new(author_1, magazine_1, "Programming efficiency")
 article_2 = Article.new(author_2, magazine_2, "Fit body rules")
 article_3 = Article.new(author_2, magazine_3, "Food for thought")
-article_4 = Article.new(author_1, magazine_4, "Coding with Ruby")
+article_4 = Article.new(author_1, magazine_4, "Programming efficiency")
+article_5 = Article.new(author_1, magazine_5, "Programming efficiency")
 
 author_1.write_article(magazine_1, "Programming efficiency")
 author_2.write_article(magazine_2, "Fit body rules")
+author_1.write_article(magazine_5, "Programming efficiency")
 
 author_1.add_article(magazine_1, "Programming efficiency")
 author_2.add_article(magazine_2, "Fit body rules")
+author_1.add_article(magazine_5, "Programming efficiency")
 
 # # author initialization test
 # puts author_1.name
@@ -47,9 +51,17 @@ author_2.add_article(magazine_2, "Fit body rules")
 # puts author_1.magazines.inspect
 
 # # Associations and Aggregate Methods
-# # Author#add_article
-puts author_1.articles.inspect
-puts author_2.articles.inspect
+# # Author#add_article returns
+# puts author_1.articles.inspect
+# puts author_2.articles.inspect
 
-puts author_1.magazines.inspect
-puts author_2.magazines.inspect
+# puts author_1.magazines.inspect
+# puts author_2.magazines.inspect
+
+# # Author#topic_areas returns
+# puts author_1.topic_areas.inspect
+# puts author_2.topic_areas.inspect
+
+## Magazine.find_by_name returns
+# puts Magazine.find_by_name("Truck dance")
+puts Magazine.find_by_name("Big ").inspect

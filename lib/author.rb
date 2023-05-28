@@ -23,7 +23,7 @@ class Author
     end
 
     def name
-        puts @name
+        @name
     end
 
     def add_article(magazine, title)

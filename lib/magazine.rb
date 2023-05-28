@@ -1,24 +1,29 @@
 class Magazine
     attr_accessor :name, :category, :contributors
-
+  
     @@all = []
-
-    def initialize(name,category)
-        @name=name
-        @category=category
-        @@all << self
-        @contributors=[]
+  
+    def initialize(name, category)
+      @name = name
+      @category = category
+      @@all << self
+      @contributors = []
     end
-
+  
     def name
-        puts @name
+      @name
     end
-
+  
     def category
-        puts @category
+      @category
     end
-
+  
     def self.all
-        @@all
+      @@all
     end
-end
+  
+    def self.find_by_name(name)
+      @@all.find { |magazine| magazine.name == name }
+    end
+  end
+  
